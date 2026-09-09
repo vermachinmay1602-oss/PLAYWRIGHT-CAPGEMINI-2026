@@ -28,7 +28,7 @@ test.describe('SauceDemo Login', () => {
     await expect(inventoryContainer(page)).not.toBeVisible();
   });
 
-  test('rejects locked-out users', async ({ page }) =>
+  test('rejects locked-out users', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     await usernameInput(page).fill(sauceDemoLoginData.lockedOut.username);
     await passwordInput(page).fill(sauceDemoLoginData.lockedOut.password);
